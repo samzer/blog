@@ -1,7 +1,8 @@
 ---
 title: Why you shouldn't skimp on your design phase?
 date: "2020-08-26T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: If you are constructing a building, a blueprint of the building is mandatory before laying the foundation. It forms the basis for estimating the resources required, the number of construction workers, the time it will take to complete the construction and a direction that will guide the civil engineers. The same methodology also applies to digital products.
+
 ---
 
 If you are constructing a building, a blueprint of the building is mandatory before laying the foundation. It forms the basis for estimating the resources required, the number of construction workers, the time it will take to complete the construction and a direction that will guide the civil engineers. The same methodology also applies to digital products.
