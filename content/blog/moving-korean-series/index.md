@@ -5,26 +5,26 @@ description: As a fan of Korean movies who hadn't explored Korean series before,
 ---
 I'm an ardent admirer of Korean cinema, having thoroughly enjoyed remarkable films like "The Spy Gone North", "Burning", "A Taxi Driver" and "Going by the Book". Surprisingly, I haven't delved into Korean series until recently. Several recommendations came my way, but for various reasons, I hadn't explored any of them.
 
-<img src="https://m.media-amazon.com/images/M/MV5BNWNiMTAzY2UtYmIwNy00ZGEzLTkwYWYtYjEwZWRmMDBkMjE0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="drawing" width="200"/>
+<img src="https://m.media-amazon.com/images/M/MV5BNWNiMTAzY2UtYmIwNy00ZGEzLTkwYWYtYjEwZWRmMDBkMjE0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="drawing" width="300"/>
 
 **"The Spy Gone North"**
 
-<img src="https://m.media-amazon.com/images/M/MV5BMWNmYjI1M2UtNDdkNi00MTgwLWFiZmYtODcxNWZhM2Y2NWFkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="drawing" width="200"/>
+<img src="https://m.media-amazon.com/images/M/MV5BMWNmYjI1M2UtNDdkNi00MTgwLWFiZmYtODcxNWZhM2Y2NWFkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="drawing" width="300"/>
 
 **"Burning"**
 
-<img src="https://m.media-amazon.com/images/M/MV5BMDA4NmRiMzQtZTI5My00YWExLTgzZTItNGRiZjYyYjcwNTY3XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg" alt="drawing" width="200"/>
+<img src="https://m.media-amazon.com/images/M/MV5BMDA4NmRiMzQtZTI5My00YWExLTgzZTItNGRiZjYyYjcwNTY3XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg" alt="drawing" width="300"/>
 
  **"A Taxi Driver"**
 
-<img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Going_by_the_Book_film_poster.jpg" alt="drawing" width="200"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Going_by_the_Book_film_poster.jpg" alt="drawing" width="300"/>
 
  **"Going by the Book"**
 
 
 Then, by chance, I came across Raunaq's video discussing a Korean series called ["Moving"](https://www.youtube.com/@RaunaqMangottill). This 20-episode series, significantly longer than most series on OTT platforms, piqued my curiosity due to Raunaq's insightful commentary, prompting me to give it a shot.
 
-<img src="https://resizing.flixster.com/47L05JQ1qewOWFO94j04yu9gM2M=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNWEwYzFjZmQtNjAyYy00OWNlLWFkNGMtMWY2ZTY1ZTUzNDM0LmpwZw==" alt="drawing" width="200"/>
+<img src="https://resizing.flixster.com/47L05JQ1qewOWFO94j04yu9gM2M=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNWEwYzFjZmQtNjAyYy00OWNlLWFkNGMtMWY2ZTY1ZTUzNDM0LmpwZw==" alt="drawing" width="300"/>
 
  **"Moving"**
 
