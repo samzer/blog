@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Oneiroi`,
+    title: `Samir Madhavan`,
     author: {
       name: `Samir Madhavan`,
       summary: `who lives in Bangalore and generally curious.`,
