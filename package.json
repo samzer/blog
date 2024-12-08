@@ -24,6 +24,7 @@
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-remark": "^2.10.0",
     "gatsby-transformer-sharp": "^2.6.0",
+    "lucide-react": "^0.454.0",
     "prismjs": "^1.22.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -45,8 +46,8 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && gatsby develop",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
