@@ -74,4 +74,13 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  onCreateWebpackConfig: ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        fallback: {
+          "stream": require.resolve("stream-browserify")
+        }
+      }
+    });
+  }
 }
