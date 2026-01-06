@@ -406,6 +406,12 @@ main {
 .tag.entertainment { color: var(--accent-red); }
 .tag.design { color: var(--accent-green); }
 
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .featured-quest .blog-excerpt {
   margin-bottom: 1.5rem;
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import { getAllPosts } from '@/lib/posts'
+import { getAllPosts, Post } from '@/lib/posts'
 import { siteConfig } from '@/lib/site-config'
 import type { Metadata } from 'next'
 
@@ -9,32 +9,41 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 }
 
-function getTagClass(title: string): string {
-  const lowerTitle = title.toLowerCase()
-  if (lowerTitle.includes('python') || lowerTitle.includes('code') || lowerTitle.includes('variable') || lowerTitle.includes('symbol')) {
+function parseTags(tags?: string): string[] {
+  if (!tags) return []
+  return tags.split(',').map(tag => tag.trim()).filter(Boolean)
+}
+
+function getTagClass(tag: string): string {
+  const lowerTag = tag.toLowerCase()
+  if (lowerTag === 'python' || lowerTag === 'tech' || lowerTag === 'code') {
     return 'python'
   }
-  if (lowerTitle.includes('korean') || lowerTitle.includes('moving') || lowerTitle.includes('watch')) {
+  if (lowerTag === 'entertainment' || lowerTag === 'movies' || lowerTag === 'tv') {
     return 'entertainment'
   }
-  if (lowerTitle.includes('design')) {
+  if (lowerTag === 'design' || lowerTag === 'ux' || lowerTag === 'ui') {
     return 'design'
   }
   return 'python'
 }
 
-function getTagLabel(title: string): string {
-  const lowerTitle = title.toLowerCase()
+function getPostTags(post: Post): string[] {
+  const tags = parseTags(post.frontmatter.tags)
+  if (tags.length > 0) return tags
+  
+  // Fallback: infer from title if no tags provided
+  const lowerTitle = post.frontmatter.title.toLowerCase()
   if (lowerTitle.includes('python') || lowerTitle.includes('code') || lowerTitle.includes('variable') || lowerTitle.includes('symbol')) {
-    return 'Python'
+    return ['Python']
   }
   if (lowerTitle.includes('korean') || lowerTitle.includes('moving') || lowerTitle.includes('watch')) {
-    return 'Entertainment'
+    return ['Entertainment']
   }
   if (lowerTitle.includes('design')) {
-    return 'Design'
+    return ['Design']
   }
-  return 'Tech'
+  return ['Tech']
 }
 
 export default function HomePage() {
@@ -74,9 +83,11 @@ export default function HomePage() {
         <h2>{featuredPost.frontmatter.title}</h2>
         <div className="quest-meta">
           <span className="blog-date">📅 {formatDate(featuredPost.frontmatter.date)}</span>
-          <span className={`tag ${getTagClass(featuredPost.frontmatter.title)}`}>
-            {getTagLabel(featuredPost.frontmatter.title)}
-          </span>
+          {getPostTags(featuredPost).map((tag, i) => (
+            <span key={i} className={`tag ${getTagClass(tag)}`}>
+              {tag}
+            </span>
+          ))}
         </div>
         <p className="blog-excerpt">
           {featuredPost.frontmatter.description || featuredPost.excerpt}
@@ -112,9 +123,13 @@ export default function HomePage() {
               </p>
               <div className="card-footer">
                 <span className="blog-date">{formatShortDate(post.frontmatter.date)}</span>
-                <span className={`tag ${getTagClass(title)}`}>
-                  {getTagLabel(title)}
-                </span>
+                <div className="tags">
+                  {getPostTags(post).map((tag, i) => (
+                    <span key={i} className={`tag ${getTagClass(tag)}`}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </Link>
           )

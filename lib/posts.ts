@@ -13,6 +13,7 @@ export interface PostFrontmatter {
   title: string
   date: string
   description: string
+  tags?: string  // comma-separated tags
 }
 
 export interface Post {

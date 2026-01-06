@@ -2,6 +2,7 @@
 title: Why one should watch - Moving (Korean Series)?
 date: "2023-10-23T17:40:32.169Z"
 description: As a fan of Korean movies who hadn't explored Korean series before, I was intrigued by Raunaq's recommendation of "Moving," a 20-episode series that, after a slow start, captivated me with its mix of superpowers, politics, espionage, and emotional depth, making it a standout in a sea of content and truly immersing me in its fictional world.
+tags: ENTERTAINMENT
 ---
 I'm an ardent admirer of Korean cinema, having thoroughly enjoyed remarkable films like "The Spy Gone North", "Burning", "A Taxi Driver" and "Going by the Book". Surprisingly, I haven't delved into Korean series until recently. Several recommendations came my way, but for various reasons, I hadn't explored any of them.
 

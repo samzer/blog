@@ -2,9 +2,46 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import Bio from '@/components/Bio'
-import { getPostBySlug, getAllPostSlugs, getAdjacentPosts } from '@/lib/posts'
+import { getPostBySlug, getAllPostSlugs, getAdjacentPosts, PostWithHtml } from '@/lib/posts'
 import { siteConfig } from '@/lib/site-config'
 import type { Metadata } from 'next'
+
+function parseTags(tags?: string): string[] {
+  if (!tags) return []
+  return tags.split(',').map(tag => tag.trim()).filter(Boolean)
+}
+
+function getTagClass(tag: string): string {
+  const lowerTag = tag.toLowerCase()
+  if (lowerTag === 'python' || lowerTag === 'tech' || lowerTag === 'code') {
+    return 'python'
+  }
+  if (lowerTag === 'entertainment' || lowerTag === 'movies' || lowerTag === 'tv') {
+    return 'entertainment'
+  }
+  if (lowerTag === 'design' || lowerTag === 'ux' || lowerTag === 'ui') {
+    return 'design'
+  }
+  return 'python'
+}
+
+function getPostTags(post: PostWithHtml): string[] {
+  const tags = parseTags(post.frontmatter.tags)
+  if (tags.length > 0) return tags
+  
+  // Fallback: infer from title if no tags provided
+  const lowerTitle = post.frontmatter.title.toLowerCase()
+  if (lowerTitle.includes('python') || lowerTitle.includes('code') || lowerTitle.includes('variable') || lowerTitle.includes('symbol')) {
+    return ['Python']
+  }
+  if (lowerTitle.includes('korean') || lowerTitle.includes('moving') || lowerTitle.includes('watch')) {
+    return ['Entertainment']
+  }
+  if (lowerTitle.includes('design')) {
+    return ['Design']
+  }
+  return ['Tech']
+}
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -81,6 +118,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <p>📅 {formattedDate}</p>
+            <div className="tags" style={{ marginTop: '1rem' }}>
+              {getPostTags(post).map((tag, i) => (
+                <span key={i} className={`tag ${getTagClass(tag)}`}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.contentHtml }}
