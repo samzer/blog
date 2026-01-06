@@ -1,99 +1,84 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# Samir Madhavan's Blog
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+A personal blog built with Next.js 15 and App Router.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Tech Stack
 
-## 🚀 Quick start
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: CSS with custom properties
+- **Content**: Markdown with gray-matter for frontmatter
+- **Fonts**: Montserrat (headings), Merriweather (body)
 
-1.  **Create a Gatsby site.**
+## Project Structure
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+```
+├── app/                  # Next.js App Router pages
+│   ├── blog/[slug]/     # Dynamic blog post pages
+│   ├── rss.xml/         # RSS feed route
+│   ├── layout.tsx       # Root layout
+│   ├── page.tsx         # Home page
+│   └── not-found.tsx    # 404 page
+├── components/          # React components
+├── content/             # Blog content
+│   ├── blog/           # Published blog posts
+│   └── archive/        # Archived posts
+├── lib/                 # Utility functions
+│   ├── posts.ts        # Post fetching and parsing
+│   └── site-config.ts  # Site configuration
+├── public/             # Static assets
+└── styles/             # CSS files
+```
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+## Getting Started
 
-1.  **Start developing.**
+### Development
 
-    Navigate into your new site’s directory and start it up.
+```bash
+npm install
+npm run dev
+```
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+Open [http://localhost:3000](http://localhost:3000) to view the blog.
 
-1.  **Open the source code and start editing!**
+### Production Build
 
-    Your site is now running at `http://localhost:8000`!
+```bash
+npm run build
+npm start
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+## Adding New Posts
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+1. Create a new folder in `content/blog/` with your post slug
+2. Add an `index.md` file with frontmatter:
 
-## 🧐 What's inside?
+```markdown
+---
+title: Your Post Title
+date: "2024-01-01T00:00:00.000Z"
+description: A brief description of your post
+---
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Your content here...
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+3. Add any images to the same folder and reference them with `./image.png`
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+## Features
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+- ✅ Static site generation with ISR support
+- ✅ SEO optimized with metadata API
+- ✅ RSS feed at `/rss.xml`
+- ✅ Sitemap at `/sitemap.xml`
+- ✅ Code syntax highlighting
+- ✅ Responsive design
+- ✅ Previous/next post navigation
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+## Deployment
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+This blog is optimized for deployment on [Vercel](https://vercel.com). Simply connect your repository and deploy.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## License
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+MIT

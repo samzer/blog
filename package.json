@@ -1,61 +1,27 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "samir-blog",
+  "version": "1.0.0",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "description": "Samir Madhavan's personal blog",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "buffer": "^6.0.3",
-    "crypto-browserify": "^3.12.1",
-    "gatsby": "^5.14.0",
-    "gatsby-image": "^2.5.0",
-    "gatsby-plugin-feed": "^5.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-offline": "^6.14.0",
-    "gatsby-plugin-react-helmet": "^6.14.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-remark-copy-linked-files": "^6.14.0",
-    "gatsby-remark-images": "^7.14.0",
-    "gatsby-remark-prismjs": "^7.14.0",
-    "gatsby-remark-responsive-iframe": "^6.14.0",
-    "gatsby-remark-smartypants": "^6.14.0",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-transformer-remark": "^6.14.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "lucide-react": "^0.454.0",
-    "path-browserify": "^1.0.1",
-    "prismjs": "^1.22.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-helmet": "^5.2.1",
-    "stream-browserify": "^3.0.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
-    "util": "^0.12.5"
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "gray-matter": "^4.0.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "remark-prism": "^1.3.6"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && gatsby develop",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "typescript": "^5.7.2"
   }
 }
