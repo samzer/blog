@@ -1,20 +1,12 @@
 import type { Metadata } from 'next'
-import { Montserrat, Merriweather } from 'next/font/google'
+import { Press_Start_2P } from 'next/font/google'
 import { siteConfig } from '@/lib/site-config'
-import '@/styles/normalize.css'
 import '@/styles/style.css'
-import '@/styles/prism.css'
 
-const montserrat = Montserrat({
+const pressStart2P = Press_Start_2P({
   subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
-
-const merriweather = Merriweather({
-  subsets: ['latin'],
-  weight: ['300', '400', '700', '900'],
-  variable: '--font-merriweather',
+  weight: '400',
+  variable: '--font-pixel',
   display: 'swap',
 })
 
@@ -55,9 +47,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${merriweather.variable}`}>
+    <html lang="en" className={pressStart2P.variable}>
       <body>{children}</body>
     </html>
   )
 }
-

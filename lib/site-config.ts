@@ -4,7 +4,7 @@ export const siteConfig = {
   siteUrl: 'https://www.samirmadhavan.com',
   author: {
     name: 'Samir Madhavan',
-    summary: 'who lives in Bangalore and generally curious.',
+    summary: 'Generally curious.',
   },
   social: {
     twitter: 'realsamzer',

@@ -71,7 +71,9 @@ export function getAllPosts(): Post[] {
   const blogPosts = getPostsFromDirectory(postsDirectory)
   const archivePosts = getPostsFromDirectory(archiveDirectory)
 
-  const allPosts = [...blogPosts, ...archivePosts]
+  // const allPosts = [...blogPosts, ...archivePosts]
+  const allPosts = [...blogPosts]
+
 
   // Sort posts by date in descending order
   return allPosts.sort((a, b) => {

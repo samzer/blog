@@ -12,7 +12,6 @@ export default function Bio() {
         width={50}
         height={50}
         className="bio-avatar"
-        style={{ borderRadius: '50%' }}
       />
       <p>
         Written by <strong>{author.name}</strong> {author.summary}{' '}
@@ -21,10 +20,9 @@ export default function Bio() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          You can follow him on Twitter
+          Follow on Twitter
         </a>
       </p>
     </div>
   )
 }
-
