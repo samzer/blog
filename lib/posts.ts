@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
-import html from 'remark-html'
+import remarkRehype from 'remark-rehype'
+import rehypeRaw from 'rehype-raw'
+import rehypeStringify from 'rehype-stringify'
 
 const postsDirectory = path.join(process.cwd(), 'content/blog')
 const archiveDirectory = path.join(process.cwd(), 'content/archive')
@@ -104,8 +106,12 @@ export async function getPostBySlug(slug: string): Promise<PostWithHtml | null> 
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  // Process markdown to HTML
-  const processedContent = await remark().use(html).process(content)
+  // Process markdown to HTML with raw HTML support for <img> tags with width/height
+  const processedContent = await remark()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
+    .process(content)
   let contentHtml = processedContent.toString()
 
   // Handle local images - convert relative paths to /blog/[slug]/ paths
