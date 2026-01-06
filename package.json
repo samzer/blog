@@ -4,7 +4,10 @@
   "private": true,
   "description": "Samir Madhavan's personal blog",
   "scripts": {
+    "sync-images": "node scripts/sync-blog-images.js",
+    "predev": "npm run sync-images",
     "dev": "next dev",
+    "prebuild": "npm run sync-images",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
