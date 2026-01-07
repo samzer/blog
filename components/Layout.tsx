@@ -122,6 +122,15 @@ export default function Layout({ children }: LayoutProps) {
                 <div className="achievement" data-title="Python Master">🐍</div>
               </div>
 
+              <div className="nav-links">
+                <Link href="/" className={`nav-btn ${pathname === '/' || pathname.startsWith('/blog') ? 'active' : ''}`}>
+                  📝 BLOG
+                </Link>
+                <Link href="/projects" className={`nav-btn ${pathname === '/projects' ? 'active' : ''}`}>
+                  📦 OPEN SOURCE
+                </Link>
+              </div>
+
               <div className="social-links">
                 <a
                   href={`https://twitter.com/${siteConfig.social.twitter}`}
