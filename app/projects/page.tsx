@@ -21,7 +21,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: 'Twitter Follower Cleanup Tool',
-    description: 'Automate the removal of suspected bot followers from your Twitter/X account. The tool identifies potential bot accounts (usernames ending with 3+ consecutive digits) and removes them as followers.',
+    description: 'Automate the removal of suspected bot followers from your Twitter/X account. The tool identifies potential bot accounts (usernames ending with 5+ consecutive digits) and removes them as followers.',
     url: 'https://github.com/samzer/x_bots_purge',
     tags: ['Python', 'Automation', 'Twitter'],
     emoji: '🧹',
