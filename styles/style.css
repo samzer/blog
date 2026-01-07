@@ -1065,6 +1065,35 @@ footer {
   background: var(--accent-blue);
 }
 
+.project-card.archived {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+.project-status {
+  position: absolute;
+  top: -12px;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  border: 3px solid var(--border);
+}
+
+.project-status.archived {
+  background: var(--text-secondary);
+  color: white;
+}
+
+.project-status-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-left: 3px solid var(--text-secondary);
+}
+
 /* Navigation Links (internal) */
 .nav-links {
   display: flex;

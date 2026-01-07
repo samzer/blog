@@ -14,6 +14,8 @@ interface Project {
   url: string
   tags: string[]
   emoji: string
+  status?: 'active' | 'archived'
+  statusNote?: string
 }
 
 const projects: Project[] = [
@@ -23,6 +25,16 @@ const projects: Project[] = [
     url: 'https://github.com/samzer/x_bots_purge',
     tags: ['Python', 'Automation', 'Twitter'],
     emoji: '🧹',
+    status: 'active',
+  },
+  {
+    name: 'ModelChimp',
+    description: 'Experiment tracking platform for Deep Learning and Machine Learning projects. Features real-time tracking of parameters and metrics, experiment comparison, team collaboration, and storage of model artifacts.',
+    url: 'https://github.com/ModelChimp/modelchimp',
+    tags: ['Python', 'MLOps', 'Deep Learning', 'Django'],
+    emoji: '🐵',
+    status: 'archived',
+    statusNote: 'No longer maintained. This was an attempt to build an MLOps company that didn\'t work out.',
   },
 ]
 
@@ -54,12 +66,18 @@ export default function ProjectsPage() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-card"
+              className={`project-card ${project.status === 'archived' ? 'archived' : ''}`}
             >
               <div className="project-number">#{String(index + 1).padStart(2, '0')}</div>
+              {project.status === 'archived' && (
+                <div className="project-status archived">📦 ARCHIVED</div>
+              )}
               <div className="project-emoji">{project.emoji}</div>
               <h2>{project.name}</h2>
               <p className="project-description">{project.description}</p>
+              {project.statusNote && (
+                <p className="project-status-note">⚠️ {project.statusNote}</p>
+              )}
               <div className="project-footer">
                 <div className="project-tags">
                   {project.tags.map((tag, i) => (
