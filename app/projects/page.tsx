@@ -28,7 +28,7 @@ const projects: Project[] = [
     status: 'active',
   },
   {
-    name: 'Dark Geman Series - Family Graph',
+    name: 'Dark German Series - Family Graph',
     description: 'An interactive network graph visualizing the intricate, time-spanning family relationships between characters in the German sci-fi series "Dark," with colored nodes representing individuals from different surnames (Tiedemen, Doppler, Kahnwald, Nielsen) connected across multiple timelines (1888-2052',
     url: 'https://github.com/samzer/dark-network-graph',
     tags: ['Web Series', 'Visualization', 'Graph'],
