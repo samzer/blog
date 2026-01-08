@@ -4,7 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/lib/site-config'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
+
+const SpaceBrickBreaker = dynamic(() => import('./SpaceBrickBreaker'), { ssr: false })
 
 interface LayoutProps {
   children: React.ReactNode
@@ -13,6 +16,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname()
   const isRootPath = pathname === '/'
+  const [showGame, setShowGame] = useState(false)
 
   useEffect(() => {
     // Animate skill bars on load
@@ -170,15 +174,21 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container">
           <div className="footer-content">
             <p>© {new Date().getFullYear()} {siteConfig.title.toUpperCase()}</p>
-            <p style={{ marginTop: '0.5rem' }}>
+            {/* <p style={{ marginTop: '0.5rem' }}>
               Made with <span className="heart"></span> and pixels
-            </p>
-            <p className="footer-pixel-text">
+            </p> */}
+            <p 
+              className="footer-pixel-text start-game-btn"
+              onClick={() => setShowGame(true)}
+              style={{ cursor: 'pointer' }}
+            >
               PRESS START TO CONTINUE<span className="cursor"></span>
             </p>
           </div>
         </div>
       </footer>
+
+      {showGame && <SpaceBrickBreaker onClose={() => setShowGame(false)} />}
     </>
   )
 }
