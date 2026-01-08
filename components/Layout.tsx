@@ -69,20 +69,20 @@ export default function Layout({ children }: LayoutProps) {
 
               <div className="stats-bar">
                 <div className="stat">
-                  <span className="stat-icon yellow"></span>
-                  <span>Product & Tech Leader</span>
+                  <span>●</span>
+                  <span><b>Product & Tech Leader</b></span>
                 </div>
                 <div className="stat">
-                  <span className="stat-icon green"></span>
-                  <span>Fintecth</span>
+                  <span>●</span>
+                  <span><b>Fintecth</b></span>
                 </div>
                 <div className="stat">
-                  <span className="stat-icon purple"></span>
-                  <span>AI Engineer</span>
+                  <span>●</span>
+                  <span><b>AI Engineer</b></span>
                 </div>
                 <div className="stat">
-                  <span className="stat-icon blue"></span>
-                  <span>Data Storyteller</span>
+                  <span>●</span>
+                  <span><b>Data Storyteller</b></span>
                 </div>
               </div>
 
