@@ -1,5 +1,5 @@
 ---
-title: Twitter/X bot Remover
+title: Week 1 - Twitter/X bot Remover
 date: "2026-07-08T12:00:32.169Z"
 description: "When faced with 2000+ bot followers on X and no free solutions that work, I built a Playwright automation tool to detect and remove them using pattern matching—no paid APIs or broken extensions needed."
 tags: Project
