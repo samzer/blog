@@ -365,7 +365,7 @@ export default function SpaceBrickBreaker({ onClose }: SpaceBrickBreakerProps) {
       {gameState === 'playing' && (
         <div style={{
           position: 'absolute',
-          top: 20,
+          top: isMobile ? 70 : 20,
           left: 20,
           color: '#00E5FF',
           fontSize: isMobile ? '12px' : '16px',
