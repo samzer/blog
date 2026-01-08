@@ -2,7 +2,7 @@
 title: 2026 Open Source Challenge 
 date: "2026-07-06T22:00:32.169Z"
 description: "A personal challenge to build and ship one open source project every week in 2026, leveraging AI tools and practical experience from implementing LLMs to create useful solutions."
-tags: AI, Open Source, 
+tags: Projects, Open Source, 
 ---
 
 Its a new year and I want to challenge myself to ship an Open Source project per week. I would like this project to be useful for me 
