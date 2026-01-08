@@ -28,6 +28,14 @@ const projects: Project[] = [
     status: 'active',
   },
   {
+    name: 'Dark Geman Series - Family Graph',
+    description: 'An interactive network graph visualizing the intricate, time-spanning family relationships between characters in the German sci-fi series "Dark," with colored nodes representing individuals from different surnames (Tiedemen, Doppler, Kahnwald, Nielsen) connected across multiple timelines (1888-2052',
+    url: 'https://github.com/samzer/dark-network-graph',
+    tags: ['Web Series', 'Visualization', 'Graph'],
+    emoji: '🔺',
+    status: 'active',
+  },
+  {
     name: 'ModelChimp',
     description: 'Experiment tracking platform for Deep Learning and Machine Learning projects. Features real-time tracking of parameters and metrics, experiment comparison, team collaboration, and storage of model artifacts.',
     url: 'https://github.com/ModelChimp/modelchimp',
