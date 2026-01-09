@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Press_Start_2P } from 'next/font/google'
+import Script from 'next/script'
 import { siteConfig } from '@/lib/site-config'
 import '@/styles/style.css'
 
@@ -48,6 +49,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={pressStart2P.variable}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-59R43FR4X3"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-59R43FR4X3');
+          `}
+        </Script>
+      </head>
       <body>{children}</body>
     </html>
   )
