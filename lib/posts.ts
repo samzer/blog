@@ -36,6 +36,10 @@ function getPostsFromDirectory(directory: string): Post[] {
 
   const posts = folderNames
     .filter((name) => {
+      // Skip draft folders (those starting with "_")
+      if (name.startsWith('_')) {
+        return false
+      }
       const fullPath = path.join(directory, name)
       return fs.statSync(fullPath).isDirectory()
     })
@@ -92,6 +96,11 @@ export function getAllPostSlugs(): string[] {
 }
 
 export async function getPostBySlug(slug: string): Promise<PostWithHtml | null> {
+  // Don't serve draft posts (slugs starting with "_")
+  if (slug.startsWith('_')) {
+    return null
+  }
+
   // Try blog directory first
   let fullPath = path.join(postsDirectory, slug, 'index.md')
 
