@@ -1,8 +1,8 @@
 ---
 title: Social Network Analysis on Actors
 date: "2013-10-10T22:00:32.169Z"
-description: A simple manual workflow for extracting and organizing recipes from saved Instagram Reels. Since Instagram makes accessing bookmarks and copying text frustrating—especially on mobile—the process uses screenshots and an LLM like ChatGPT to parse and clean up the recipe text. The formatted recipe is then saved in a note-taking app (like Apple Notes) alongside the original Instagram link, making it easy to revisit, organize, and cook later.
-tags: AI, Cooking, 
+description: This data analysis project uses web scraping and social network analysis to explore Hollywood actor connections, revealing which actors have worked together most frequently and how any two actors are linked through their filmographies. Key findings include Christopher Lee having the most films among popular actors, Martin Sheen and Charlie Sheen being the most frequent co-stars, and Robert De Niro being the most connected actor overall. The analysis identifies Eli Wallach as the central "hub" through which most actors can be connected, demonstrating how graph theory can quantify Hollywood's collaborative network.
+tags: Graph, Movies, 
 ---
 
 Always been a movie buff since the time I cannot remember. Whenever I've had some time to kill, I'll go on various movie websites and check out various details or trivia questions about the movie. Sometimes, questions like "which are the two most popular actors who acted together the most?" will pop in my head.
