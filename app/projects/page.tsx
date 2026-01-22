@@ -20,11 +20,11 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: 'Twitter Follower Cleanup Tool',
-    description: 'Automate the removal of suspected bot followers from your Twitter/X account. The tool identifies potential bot accounts (usernames ending with 5+ consecutive digits) and removes them as followers.',
-    url: 'https://github.com/samzer/x_bots_purge',
-    tags: ['Python', 'Automation', 'Twitter'],
-    emoji: '🧹',
+    name: 'samzerSQL - A minimal, no-nonsense SQL client',
+    description: 'A minimal, no-nonsense SQL client for data professionals who just want to write, format, and organize queries without the bloat. Built out of frustration with overcomplicated tools—samzerSQL keeps it simple.',
+    url: 'https://github.com/samzer/samzerSQL',
+    tags: ['SQL', 'Client', 'Data'],
+    emoji: '🐘',
     status: 'active',
   },
   {
