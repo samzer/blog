@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     name: 'samzerSQL - A minimal, no-nonsense SQL client',
     description: 'A minimal, no-nonsense SQL client for data professionals who just want to write, format, and organize queries without the bloat. Built out of frustration with overcomplicated tools—samzerSQL keeps it simple.',
-    url: 'https://github.com/samzer/samzerSQL',
+    url: 'https://samzersql.netlify.app/',
     tags: ['SQL', 'Client', 'Data'],
     emoji: '🐘',
     status: 'active',
