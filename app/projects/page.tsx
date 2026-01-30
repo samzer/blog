@@ -20,6 +20,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: 'Pinch the bug - A Duck Hunt-inspired game using webcam motion capture to squash bugs with your fingers.',
+    description: 'A Duck Hunt-inspired game using webcam motion capture to squash bugs with your fingers.',
+    url: 'https://github.com/samzer/pinch_the_bug',
+    tags: ['Game', 'Project'],
+    emoji: '🐛',
+    status: 'active',
+  },
+  {
     name: 'samzerSQL - A minimal, no-nonsense SQL client',
     description: 'A minimal, no-nonsense SQL client for data professionals who just want to write, format, and organize queries without the bloat. Built out of frustration with overcomplicated tools—samzerSQL keeps it simple.',
     url: 'https://samzersql.netlify.app/',

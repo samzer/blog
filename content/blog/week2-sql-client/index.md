@@ -1,5 +1,5 @@
 ---
-title: Week 2 - samzerSQL, an SQL client 
+title: Project 2 - samzerSQL, an SQL client 
 date: "2026-01-22T12:00:32.169Z"
 description: "A minimal, no-nonsense SQL client for data professionals who just want to write, format, and organize queries without the bloat. Built out of frustration with overcomplicated tools—samzerSQL keeps it simple."
 tags: Project
