@@ -5,7 +5,6 @@ description: A practical checkpoint on using AI and LLMs after two years of heav
 tags: AI 
 ---
 
-# AI Learning Checkpoint 2026 Feb
 
 I recently read [S Anand's blog post on AI advice](http://www.s-anand.net/blog/ai-advice/) which shared by [Sunil](https://in.linkedin.com/in/sunil-dhaka) from my team, and it got me thinking about my own journey with LLMs and AI agents. Over the past 2 years, I've been experimenting extensively with these tools, both in my personal life and at work. What started as casual experimentation has become a set of workflows, tools and solutions that I use everyday
 
