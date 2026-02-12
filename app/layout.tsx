@@ -1,15 +1,7 @@
 import type { Metadata } from 'next'
-import { Press_Start_2P } from 'next/font/google'
 import Script from 'next/script'
 import { siteConfig } from '@/lib/site-config'
 import '@/styles/style.css'
-
-const pressStart2P = Press_Start_2P({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-pixel',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -48,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={pressStart2P.variable}>
+    <html lang="en">
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-59R43FR4X3"

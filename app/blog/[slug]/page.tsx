@@ -11,25 +11,10 @@ function parseTags(tags?: string): string[] {
   return tags.split(',').map(tag => tag.trim()).filter(Boolean)
 }
 
-function getTagClass(tag: string): string {
-  const lowerTag = tag.toLowerCase()
-  if (lowerTag === 'python' || lowerTag === 'tech' || lowerTag === 'code') {
-    return 'python'
-  }
-  if (lowerTag === 'entertainment' || lowerTag === 'movies' || lowerTag === 'tv') {
-    return 'entertainment'
-  }
-  if (lowerTag === 'design' || lowerTag === 'ux' || lowerTag === 'ui') {
-    return 'design'
-  }
-  return 'python'
-}
-
 function getPostTags(post: PostWithHtml): string[] {
   const tags = parseTags(post.frontmatter.tags)
   if (tags.length > 0) return tags
-  
-  // Fallback: infer from title if no tags provided
+
   const lowerTitle = post.frontmatter.title.toLowerCase()
   if (lowerTitle.includes('python') || lowerTitle.includes('code') || lowerTitle.includes('variable') || lowerTitle.includes('symbol')) {
     return ['Python']
@@ -103,11 +88,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     day: 'numeric',
   })
 
+  const tags = getPostTags(post)
+
   return (
     <Layout>
       <div className="blog-post-page">
         <Link href="/" className="back-link">
-          ← BACK TO QUESTS
+          &larr; All posts
         </Link>
 
         <article
@@ -117,14 +104,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         >
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p>📅 {formattedDate}</p>
-            <div className="tags" style={{ marginTop: '1rem' }}>
-              {getPostTags(post).map((tag, i) => (
-                <span key={i} className={`tag ${getTagClass(tag)}`}>
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <p className="post-meta">
+              {formattedDate}
+              {tags.length > 0 && <> &middot; {tags.join(', ')}</>}
+            </p>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.contentHtml }}
@@ -137,26 +120,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </article>
 
         <nav className="blog-post-nav">
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}
-          >
+          <ul>
             <li>
               {previous && (
                 <Link href={`/blog/${previous.slug}`} rel="prev">
-                  ← {previous.frontmatter.title}
+                  &larr; {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
                 <Link href={`/blog/${next.slug}`} rel="next">
-                  {next.frontmatter.title} →
+                  {next.frontmatter.title} &rarr;
                 </Link>
               )}
             </li>
