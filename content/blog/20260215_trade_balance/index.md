@@ -5,7 +5,7 @@ description: Using UN Comtrade data, AI agents, and a 3D globe to visualize trad
 tags: AI, Data Visualization
 ---
 
-<img src="./un1.png" width="850" alt="usa">
+<img src="./globe-trade-flows-hq.gif" width="850" alt="usa">
 
 It started as a random thought while I was driving back home.
 
