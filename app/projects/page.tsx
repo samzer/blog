@@ -19,6 +19,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: 'Global Trade Balance Visualization',
+    description: 'An interactive 3D globe visualizing trade surplus and deficit between countries, built using UN Comtrade data, mirror statistics, and AI-generated insights for the top 100 countries.',
+    url: 'https://remarkable-semifreddo-946a1e.netlify.app/',
+    tags: ['Data Visualization', '3D Globe', 'AI', 'Trade'],
+    status: 'active',
+  },
+  {
     name: 'Pinch the Bug',
     description: 'A Duck Hunt-inspired game using webcam motion capture to squash bugs with your fingers.',
     url: 'https://github.com/samzer/pinch_the_bug',
