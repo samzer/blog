@@ -38,5 +38,6 @@ The good news is that effective product management is going to get _more_ valuab
 
 **Being able to ship small things yourself.** Earlier, even changing a label on a page required going to a developer. Now a PM can make that change, raise a PR, get it reviewed by the tech lead, and get it deployed without touching engineering time except for review. This is already happening in a lot of orgs.
 
+---
 
 Honestly, I think product management is going to become _more fun_ because of these tools. The boring parts, the docs, the tickets, the formatting, those can be offloaded. The interesting parts, understanding users, making product bets, figuring out what to build, those become the whole job. If you're a PM and you're not actively rewiring how you work, you're already behind.
