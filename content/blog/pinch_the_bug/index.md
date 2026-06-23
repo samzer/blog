@@ -1,5 +1,5 @@
 ---
-title: Project 3 - Pinch the Bug, the Game
+title: Pinch the Bug, the Game
 date: "2026-01-30T22:00:32.169Z"
 description: A Duck Hunt-inspired game using webcam motion capture to squash bugs with your fingers.
 tags: Game, Project 
