@@ -7,13 +7,13 @@ tags:
   - investment
   - data
 ---
-The most common Systematic Investment Plan that everyone uses is the monthly fixe investment into  assets such as stocks, gold, mutual funds etc. 
+The most common Systematic Investment Plan that everyone uses is the monthly fixed investment into  assets such as stocks, gold, mutual funds etc. 
 
 Fixed income assets don't have the volatility / Beta of Equities because of which there is not much that can be done in terms of the monthly investment once you have set your asset allocation.
 
 There are strategies that can be done with equity in terms of the SIP that can help with getting more returns. The stock market goes through various phases, it can be costly or cheap. SIP helps in averaging out the ups and downs of the stock market and helps with getting the average return.
 
-There are moments in the stock market that it is costly to buy the mutual funds and thats an opportunity to hold onto the money so that it can invested when it is closer to the average or below average.
+There are moments in the stock market that it is costly to buy the mutual funds and thats an opportunity to hold onto the money so that it can be invested when it is closer to the average or below average.
 
 Since I'm in India, the historical P/E ( Price to Earnings) ratios are available at https://www.niftyindices.com/reports
 
@@ -39,7 +39,7 @@ If the simple strategy is used of not investing when P/E is above average then t
 
 <img src="./4.png" width="250" alt="P/E-based SIP returns with cash held">
 
-Its an increase but not a substantial increase. Building upon the strategy, instead of the parking the cash, invest it in a short term duration fund like ICICI Prudential Short Term Fund then the value of the investment goes to 5.9 Cr
+Its an increase but not a substantial increase. Building upon the strategy, instead of parking the cash, invest it in a short term duration fund like ICICI Prudential Short Term Fund then the value of the investment goes to 5.9 Cr
 
 <img src="./5.png" width="250" alt="P/E-based SIP with cash parked in short term fund">
 
