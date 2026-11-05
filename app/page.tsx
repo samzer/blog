@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import { getAllPosts } from '@/lib/posts'
+import { getAllPosts, parseTags } from '@/lib/posts'
 import { siteConfig } from '@/lib/site-config'
 import type { Metadata } from 'next'
 
@@ -9,12 +9,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 }
 
-function parseTags(tags?: string): string[] {
-  if (!tags) return []
-  return tags.split(',').map(tag => tag.trim()).filter(Boolean)
-}
-
-function getPostTags(post: { frontmatter: { tags?: string; title: string } }): string[] {
+function getPostTags(post: { frontmatter: { tags?: string | string[]; title: string } }): string[] {
   const tags = parseTags(post.frontmatter.tags)
   if (tags.length > 0) return tags
 

@@ -2,14 +2,9 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import Bio from '@/components/Bio'
-import { getPostBySlug, getAllPostSlugs, getAdjacentPosts, PostWithHtml } from '@/lib/posts'
+import { getPostBySlug, getAllPostSlugs, getAdjacentPosts, parseTags, PostWithHtml } from '@/lib/posts'
 import { siteConfig } from '@/lib/site-config'
 import type { Metadata } from 'next'
-
-function parseTags(tags?: string): string[] {
-  if (!tags) return []
-  return tags.split(',').map(tag => tag.trim()).filter(Boolean)
-}
 
 function getPostTags(post: PostWithHtml): string[] {
   const tags = parseTags(post.frontmatter.tags)

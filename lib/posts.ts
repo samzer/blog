@@ -13,7 +13,13 @@ export interface PostFrontmatter {
   title: string
   date: string
   description: string
-  tags?: string  // comma-separated tags
+  tags?: string | string[]  // comma-separated string or YAML list
+}
+
+export function parseTags(tags?: string | string[]): string[] {
+  if (!tags) return []
+  const list = Array.isArray(tags) ? tags : String(tags).split(',')
+  return list.map(tag => String(tag).trim()).filter(Boolean)
 }
 
 export interface Post {
