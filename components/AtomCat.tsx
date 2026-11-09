@@ -5,14 +5,14 @@ import { Caveat } from 'next/font/google'
 
 const caveat = Caveat({ subsets: ['latin'], weight: '600' })
 
-// Easter egg: Atom peeks in from the right. Always in dev and on /atom, 1-in-20 visits otherwise.
+// Easter egg: Atom peeks in from the right. Always in dev and on /atom, 1-in-10 visits otherwise.
 export default function AtomCat() {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
     // Rolled on the client: the homepage is static, so a server roll would be frozen at build time.
     const always = process.env.NODE_ENV === 'development' || location.pathname.startsWith('/atom')
-    if (always || Math.random() < 1 / 20) setShow(true)
+    if (always || Math.random() < 1 / 10) setShow(true)
   }, [])
 
   if (!show) return null
