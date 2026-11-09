@@ -45,3 +45,8 @@ Thumbs.db
 
 # Obsidian
 .obsidian/
+
+# Playwright
+.playwright/
+.playwright-test/
+.playwright-mcp/    
