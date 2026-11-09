@@ -503,3 +503,112 @@ footer p {
   gap: var(--gap);
   margin-top: 0.5rem;
 }
+
+/* Atom the cat easter egg */
+.atom {
+  position: fixed;
+  right: 0;
+  top: calc(50% - 90px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.atom-img {
+  width: 200px;
+  height: auto;
+  display: block;
+  transform-origin: right center;
+  animation: atom-peek 1.4s cubic-bezier(0.34, 1.4, 0.64, 1) 0.8s both;
+}
+
+.atom-note {
+  position: relative;
+  width: 210px;
+  margin-right: -10px;
+  margin-top: -40px;
+  pointer-events: auto;
+  background: var(--bg);
+  border-radius: 24px;
+  box-shadow: 0 0 18px 14px var(--bg);
+  animation: atom-fade 0.3s 2s both;
+}
+
+.atom-text {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  color: var(--text);
+  animation: atom-write 1.6s linear 2.2s both;
+}
+
+.atom-arrow {
+  display: block;
+  width: 120px;
+  margin-left: auto;
+  overflow: visible;
+}
+
+.atom-arrow path {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.atom-arrow-line { animation: atom-draw 0.7s ease-out 3.8s forwards; }
+.atom-arrow-head { animation: atom-draw 0.25s ease-out 4.5s forwards; }
+
+.atom-close {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  animation: atom-fade 0.3s 4.8s both;
+}
+
+/* Slides in from the edge, hesitates, then leans in a little further */
+@keyframes atom-peek {
+  0% { transform: translateX(100%); }
+  45% { transform: translateX(40%) rotate(4deg); }
+  65% { transform: translateX(40%) rotate(-3deg); }
+  100% { transform: translateX(0) rotate(0); }
+}
+
+/* Left-to-right reveal so the text looks handwritten */
+@keyframes atom-write {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes atom-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes atom-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .atom-img { width: 130px; }
+  .atom-note { width: 150px; }
+  .atom-text { font-size: 1.15rem; }
+  .atom-arrow { width: 80px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atom-img, .atom-note, .atom-text, .atom-close { animation: none; }
+  .atom-arrow path { animation: none; stroke-dashoffset: 0; }
+}

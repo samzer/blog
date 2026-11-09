@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import PostHeatmap from '@/components/PostHeatmap'
+import AtomCat from '@/components/AtomCat'
 import { getAllPosts, parseTags } from '@/lib/posts'
 import { siteConfig } from '@/lib/site-config'
 import type { Metadata } from 'next'
@@ -50,6 +51,7 @@ export default function HomePage() {
     <Layout>
       <h3>Posts</h3>
       <PostHeatmap posts={posts} />
+      <AtomCat />
       <ul className="post-list">
         {posts.map((post) => {
           const title = post.frontmatter.title || post.slug
