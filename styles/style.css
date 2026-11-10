@@ -491,10 +491,10 @@ footer p {
 .heatmap-legend .heatmap-cell { width: 10px; }
 
 .heatmap-cell.l0 { background: #ebedf0; }
-.heatmap-cell.l1 { background: #9be9a8; }
-.heatmap-cell.l2 { background: #40c463; }
-.heatmap-cell.l3 { background: #30a14e; }
-.heatmap-cell.l4 { background: #216e39; }
+.heatmap-cell.l1, .pixel-trail.l1 { background: #9be9a8; }
+.heatmap-cell.l2, .pixel-trail.l2 { background: #40c463; }
+.heatmap-cell.l3, .pixel-trail.l3 { background: #30a14e; }
+.heatmap-cell.l4, .pixel-trail.l4 { background: #216e39; }
 
 .heatmap-legend {
   display: flex;
@@ -611,4 +611,50 @@ footer p {
 @media (prefers-reduced-motion: reduce) {
   .atom-img, .atom-note, .atom-text, .atom-close { animation: none; }
   .atom-arrow path { animation: none; stroke-dashoffset: 0; }
+}
+
+/* Cursor pixel trail (colours shared with the heatmap above) */
+.pixel-trail {
+  --max: 1;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  z-index: 5;
+  animation: pixel-fade 1s steps(4, end) forwards;
+}
+
+.pixel-trail.faint { --max: 0.3; }
+
+/* Click embers: x drifts out, y pops up then falls with gravity, colour cools as it drops */
+.pixel-trail.ember {
+  animation:
+    ember-x var(--t) ease-out forwards,
+    ember-y var(--t) linear forwards,
+    ember-heat var(--t) steps(1, end) forwards;
+}
+
+@keyframes pixel-fade {
+  from { opacity: var(--max); }
+  to { opacity: 0; }
+}
+
+@keyframes ember-x {
+  to { translate: var(--dx) 0; }
+}
+
+@keyframes ember-y {
+  0% { transform: translateY(0); animation-timing-function: cubic-bezier(0.2, 0.6, 0.4, 1); }
+  20% { transform: translateY(var(--up)); animation-timing-function: cubic-bezier(0.6, 0, 1, 1); }
+  100% { transform: translateY(var(--fall)); }
+}
+
+@keyframes ember-heat {
+  0% { background: #fff3b0; }
+  12% { background: #ffd23f; }
+  30% { background: #ff9f1c; }
+  50% { background: #f3591f; }
+  70% { background: #c62a12; }
+  88% { background: #6b1d10; opacity: 0.6; }
+  100% { background: #6b1d10; opacity: 0; }
 }
