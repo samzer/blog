@@ -16,20 +16,20 @@ The script is a satirical news in the style of the [onion news](https://theonion
 
 
 >**30-second satirical news reel**  
- Deliver every line with absolute news-anchor seriousness. Small “SATIRE” label on screen._
->
-  **0–8 sec | Anchor**  
+  Deliver every line with absolute news-anchor seriousness. Small “SATIRE” label on screen._
+
+>  **0–8 sec | Anchor**  
   “Breaking: An Indiranagar landlord has converted an occupied apartment into a café. The eviction was announced as a surprise collaboration.”
->
-  _Headline: TENANT REBRANDED AS FOOTFALL_
->
-  **8–16 sec | Ridiculously aesthetic café footage**  
+
+>  _Headline: TENANT REBRANDED AS FOOTFALL_
+
+>  **8–16 sec | Ridiculously aesthetic café footage**  
   “His bedroom seats twelve. His toilet is now a speakeasy. Cocktails cost twelve hundred. The flush costs extra.”
->
-  **16–21 sec | Exhausted tenant, interviewed**  
+
+>  **16–21 sec | Exhausted tenant, interviewed**  
   “I asked for my deposit back. They offered equity.”
->
-  **21–30 sec | Back to anchor**  
+
+>  **21–30 sec | Back to anchor**  
   “The café employs six people to explain why there’s no normal coffee. Police have asked the tenant to move along. He’s ruining the vibe.”
 
 
